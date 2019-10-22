@@ -15,6 +15,17 @@ namespace Practice_CA1
             Player p3 = new Player(3, "Jack", 0);
             Player p4 = new Player(4, "Chris", 0);
             Player p5 = new Player(5, "Matt", 0);
+
+            List<Player> allPlayers = new List<Player>();
+
+            allPlayers.Add(p1);
+            allPlayers.Add(p2);
+            allPlayers.Add(p3);
+            allPlayers.Add(p4);
+            allPlayers.Add(p5);
+
+            p1.IncreaseScore(1);
+            p2.IncreaseScore(10);
         }
     }
 }
