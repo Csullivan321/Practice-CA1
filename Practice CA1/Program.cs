@@ -31,6 +31,34 @@ namespace Practice_CA1
             p5.IncreaseScore(8);
 
             Display(allPlayers);
+
+            
+        }//end of main
+
+
+        public static void GetData(List<Player> allPlayers)
+        {
+            Console.WriteLine("Please enter the number of player you want to add score to ");
+            string input = Console.ReadLine();
+            int playerNumber = int.Parse(input);
+
+            while (playerNumber != 0)
+            {
+                //determine player selected
+                Player selectedPlayer = allPlayers.ElementAt(playerNumber - 1);//using -1 as index starts at 0
+
+                //increase score for that player
+                selectedPlayer.IncreaseScore(1);
+
+                //display results
+                Display(allPlayers);
+
+                //ask for another player or 0 to quit
+                Console.WriteLine("Please enter the number of player you want to add score to ");
+                input = Console.ReadLine();
+                playerNumber = int.Parse(input);
+
+            }
         }
 
         private static void Display(List<Player>players)
@@ -43,6 +71,8 @@ namespace Practice_CA1
             {
                 Console.Write("{0,-10}",player.Score);
             }
+
+            Console.WriteLine();//add a new line at the end of scores
         }
     }
 }
