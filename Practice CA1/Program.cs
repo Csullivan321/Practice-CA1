@@ -26,6 +26,23 @@ namespace Practice_CA1
 
             p1.IncreaseScore(1);
             p2.IncreaseScore(10);
+            p3.IncreaseScore(23);
+            p4.IncreaseScore(34);
+            p5.IncreaseScore(8);
+
+            Display(allPlayers);
+        }
+
+        private static void Display(List<Player>players)
+        {
+            Console.WriteLine("{0,-10}{1,-10}{2,-10}{3,-10}{4,-10}", "Player 1", "Player 2", "Player 3", "Player 4", "Player 5");
+
+            // loop through all players and dispaly score
+
+            foreach(Player player in players)
+            {
+                Console.Write("{0,-10}",player.Score);
+            }
         }
     }
 }
