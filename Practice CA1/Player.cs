@@ -8,10 +8,16 @@ namespace Practice_CA1
 {
     public class Player
     {
-        public  int PlayerId  { get; set; }
-        public int PlayerName { get; set; }
+        public  int PlayerId  { get;  }
+        public string PlayerName { get; set; }
         public int Score { get; set; }
 
+        public Player(int id, string name, int score)
+        {
+            PlayerId = id;
+            PlayerName = name;
+            Score = score;
 
+        }
     }
 }
